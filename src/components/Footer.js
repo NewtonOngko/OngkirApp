@@ -64,7 +64,7 @@ const Footer = () => {
         <Logo>Ongkir APP</Logo>
         <Desc>
         Ongkir App merupakan sebuah platform yang memudahkan para penjual dan pebisnis online untuk melakukan 
-        cek tarif ongkir. Anda bisa cek ongkir JNE Cek ongkir JNE, cek tarif JNE, cek Tarif JNT, 
+        cek tarif ongkir. Anda bisa cek ongkir JNE Cek ongkir JNE, cek tarif JNE, cek Tarif JNE, 
         serta ekspedisi lainnya menggunakan Shipper dalam melakukan cek tarif pengiriman dengan mudah, 
         cepat, akurat, di mana saja, dan kapan saja. Shipper mendukung pengecekan cek ongkos kirim termurah 
         dari berbagai macam ekspedisi yang ada di Indonesia

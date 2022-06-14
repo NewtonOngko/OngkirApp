@@ -2,8 +2,10 @@ import axios from 'axios';
 import React,{useState,useEffect} from 'react'
 import styled from "styled-components";
 import Card from './Card';
+import Nodata from './Nodata';
 import Selector from './Selector';
 import SelectorCity from './SelectorCity';
+
 
 
 const Container = styled.div`
@@ -133,11 +135,11 @@ export default function Main() {
     setGram(event.target.value)
   }
   //conditional rendering
-  const CardShow=()=>{
+  const CardShow=(data)=>{
     if(cost){
-      return <Card/>
+      return <Card data={data}/>
     }
-    return <Card/>
+    return <Nodata/>
   }
 
   const Getcity = (province,id) =>{
@@ -145,7 +147,7 @@ export default function Main() {
       url: baseURLcity(id ? id : "", province ? province : ""),
       method: "get",
       headers: {
-        key: "4bea0e5cfdbbe57c501acea35845c9df",
+        key: "1c85f9ece8b97dce207b17e094b18b00",
         "Content-Type": "application/x-www-form-urlencoded",
       },
     })
@@ -162,7 +164,7 @@ export default function Main() {
       url: baseURLcity(id ? id : "", province ? province : ""),
       method: "get",
       headers: {
-        key: "4bea0e5cfdbbe57c501acea35845c9df",
+        key: "1c85f9ece8b97dce207b17e094b18b00",
         "Content-Type": "application/x-www-form-urlencoded",
       },
     })
@@ -179,7 +181,7 @@ export default function Main() {
       url: Urlcost,
       method: "post",
       headers: {
-        key: "4bea0e5cfdbbe57c501acea35845c9df",
+        key: "1c85f9ece8b97dce207b17e094b18b00",
         "Content-Type": "application/json",
       },
       data:{
@@ -203,7 +205,7 @@ export default function Main() {
       url: baseURL,
       method: "get",
       headers: {
-        key: "4bea0e5cfdbbe57c501acea35845c9df",
+        key: "1c85f9ece8b97dce207b17e094b18b00",
         "Content-Type": "application/x-www-form-urlencoded",
       },
     })
@@ -273,7 +275,7 @@ export default function Main() {
           Cek Ongkir
         </Button>
       </ContainerBot>
-     { <CardShow/>}
+     { <CardShow data={cost}/>}
     </Container>
   );
 }
