@@ -3,11 +3,11 @@ import styled from "styled-components";
 
 
 const Container = styled.div`
-  width: 960px;
+  width: 100%;
   display: flex;
   align-content: center;
   justify-content: center;
-  /* background-color: #202020; */
+  background-color: #202020;
 `;
 
 const Wrapper = styled.div`

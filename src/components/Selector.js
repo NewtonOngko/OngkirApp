@@ -19,7 +19,7 @@ const Select = styled.select`
   font-size: 14px;
   padding: 10px;
   border-radius: 10px;
-  appearance: none;
+  /* appearance: none; */
 `;
 const Selector = ({ label, value, options, onChange }) => {
   return (

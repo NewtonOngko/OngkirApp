@@ -2,12 +2,13 @@ import React from 'react'
 import Main from '../components/Main';
 import Navbar from '../components/Navbar'
 import styled from "styled-components";
+import Footer from '../components/Footer';
 
 const Container = styled.div`
   display: flex;
   align-content: center;
   justify-content: center;
-  background-color: #202020;
+  /* background-color: #202020; */
   flex-direction: column;
 `;
 const Top = styled.div`
@@ -24,6 +25,7 @@ export default function Home() {
         <Navbar />
       </Top>
       <Main />
+      <Footer/>
     </Container>
   );
 }
