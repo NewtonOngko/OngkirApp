@@ -4,6 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Tata cara Install
 
+0. Clone dahulu git tersebut
 1. Pertama" bisa menggunakan `yarn install` atau `npm install`
 2. Kemudian bisa jalankan dengan `npm start`
 3. lalu project akan berjalan 
