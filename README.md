@@ -9,9 +9,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 3. lalu project akan berjalan 
 
 ## Penggunaan
-1. Pada awal akan terdapat halaman login dengan auth yang sudah di harcode 
+1. Pada awal akan terdapat halaman login dengan auth yang sudah di hardcode 
     `username : user1 dan password : pass1` atau `username : user2 dan password : pass2`
 2. Kemudian akan diarahkan ke halaman home dan disana terdapat Tampilan untuk mengecek ongkir
     isi Asal dan tujuan kemudian isi juga berat dari paket tersebut kemudian tekan Pesan pengiriman
 3. Maka Jasa Pengiriman yang tersedia akan muncul dalam bentuk list 
+
+## Info
+- Implementasi Awal login sudah menggunakan routing sehingga bisa direct ke halaman home 
 
