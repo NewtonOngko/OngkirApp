@@ -144,7 +144,7 @@ export default function Main() {
 
   const Getcity = (province,id) =>{
     axios({
-      url: baseURLcity(id ? id : "", province ? province : ""),
+      url: baseURLcity(id ? id : "", province ? province : post[0].province_id ),
       method: "get",
       headers: {
         key: "1c85f9ece8b97dce207b17e094b18b00",
@@ -153,6 +153,7 @@ export default function Main() {
     })
       .then((response) => {
         setDataCity(response.data.rajaongkir.results);
+        setCity(response.data.rajaongkir.results[0].city_id)
       })
       .catch((err) => {
         console.log(err);
@@ -161,7 +162,7 @@ export default function Main() {
 
   const Getcity1 = (province,id) =>{
     axios({
-      url: baseURLcity(id ? id : "", province ? province : ""),
+      url: baseURLcity(id ? id : "", province ? province : post[0].province_id),
       method: "get",
       headers: {
         key: "1c85f9ece8b97dce207b17e094b18b00",
@@ -170,13 +171,14 @@ export default function Main() {
     })
       .then((response) => {
         setDataCity1(response.data.rajaongkir.results);
+        setCity1(response.data.rajaongkir.results[0].city_id)
       })
       .catch((err) => {
         console.log(err);
       });
   }
 
-  const GetCost =(asal,tujuan,berat)=>{
+  const   GetCost =(asal,tujuan,berat)=>{
     axios({
       url: Urlcost,
       method: "post",
@@ -210,14 +212,15 @@ export default function Main() {
       },
     })
       .then((response) => {
-        // console.log(response.data.rajaongkir.results)
         setPost(response.data.rajaongkir.results);
+        Getcity(response.data.rajaongkir.results[0].province_id);
+        Getcity1(response.data.rajaongkir.results[0].province_id);
       })
       .catch((err) => {
         console.log(err);
       });
-      Getcity()
-      Getcity1()
+      // Getcity()
+      // Getcity1()
   }, []);
 
   if (!post) return null;
